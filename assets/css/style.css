@@ -760,7 +760,11 @@ section {
 # Services
 --------------------------------------------------------------*/
 #services{
-  background: linear-gradient(180deg,#430a72 4%,#0d001c 90%)!important;
+  background-image: url("../img/testimonials/volunteer-background.jpg");
+}
+
+#services-title h2{
+  color: #36f336;
 }
 
 .services .icon-box {
