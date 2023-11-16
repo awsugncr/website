@@ -286,7 +286,7 @@ h6 {
 }
 
 .navbar-mobile {
-  position: fixed;
+  position: fixed !important;
   overflow: hidden;
   top: 0;
   right: 0;
@@ -325,11 +325,6 @@ h6 {
   color: #2a2c39;
 }
 
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover>a {
-  color: #fff;
-}
 
 .navbar-mobile .getstarted,
 .navbar-mobile .getstarted:focus {
@@ -772,7 +767,7 @@ section {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  background: #fff;
+  background: #f5fffa;
   box-shadow: 0 2px 29px 0 rgba(68, 88, 144, 0.12);
   transition: all 0.4s ease-in-out;
   width: 100%;
