@@ -825,6 +825,93 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Sponsorship
+--------------------------------------------------------------*/
+#sponsorship-container{
+  background-image: url("../img/sponsorship-background.png");
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.cfs-content p{
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+#swipe-info {
+  display: none;
+}
+
+/* Media query for screens with a width less than 1000px */
+@media only screen and (max-width: 1000px) {
+  #swipe-info {
+    display: block;
+  }
+}
+
+#sponsorship-container table {
+  opacity: 0.75;
+  border-radius: 7%;
+}
+
+#platinum{
+  background-color: #E5E4E2;
+}
+
+#gold{
+  background-color:#ffd700;
+}
+
+#silver{
+  background-color: #c0c0c0;
+}
+
+#bronze{
+  background-color:#CD7F32;
+}
+
+.col-title{
+  font-size: 1.25rem;
+  color: rgb(73, 9, 120) !important;
+  font-weight: bolder;
+}
+
+
+.info-box {
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(65, 76, 100, 0.05);
+  padding: 20px 0 30px 0;
+}
+
+.info-box i {
+  font-size: 32px;
+  color: #ffc107;
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px dotted #ffeeba;
+}
+
+.info-box h3 {
+  font-size: 20px;
+  color: #777777;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+#itenary-img img{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio #portfolio-flters {
@@ -858,38 +945,40 @@ section {
 .portfolio #portfolio-flters li:last-child {
   margin-right: 0;
 }
-
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item .portfolio-img {
   overflow: hidden;
 }
 
-.portfolio .portfolio-item img {
-  position: relative;
-  top: 0;
-  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+.portfolio .portfolio-item .portfolio-img img {
+  transition: all 0.8s ease-in-out;
 }
 
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
   position: absolute;
   left: 15px;
-  right: 15px;
-  bottom: -50px;
+  bottom: 0;
   z-index: 3;
+  right: 15px;
   transition: all ease-in-out 0.3s;
-  background: #ffc107;
-  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
 }
 
 .portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
   color: #fff;
   font-weight: 600;
+  color: #fff;
+  margin-bottom: 0px;
 }
 
 .portfolio .portfolio-item .portfolio-info p {
-  color: #fff;
+  color: #fedac0;
   font-size: 14px;
   margin-bottom: 0;
 }
@@ -897,29 +986,50 @@ section {
 .portfolio .portfolio-item .portfolio-info .preview-link,
 .portfolio .portfolio-item .portfolio-info .details-link {
   position: absolute;
-  right: 50px;
+  right: 40px;
   font-size: 24px;
   top: calc(50% - 18px);
-  color: rgba(255, 255, 255, 0.7);
-  transition: ease-in-out 0.3s;
+  color: #fff;
+  transition: 0.3s;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #fff;
+  color: #fd9f5b;
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
-  right: 15px;
+  right: 10px;
 }
 
-.portfolio .portfolio-item:hover img {
-  top: -30px;
+.portfolio .portfolio-item .portfolio-links {
+  opacity: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-links a {
+  color: #fff;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-links a:hover {
+  color: #fd9f5b;
+}
+
+.portfolio .portfolio-item:hover .portfolio-img img {
+  transform: scale(1.2);
 }
 
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
-  bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -943,16 +1053,16 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #ffc107;
+  border: 1px solid #ef6603;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ffc107;
+  background-color: #ef6603;
 }
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  box-shadow: 0px 0 30px rgba(65, 76, 100, 0.08);
+  box-shadow: 0px 0 30px rgba(42, 44, 57, 0.08);
 }
 
 .portfolio-details .portfolio-info h3 {
