@@ -823,21 +823,49 @@ section {
   margin-bottom: 0;
 }
 
+.services .card-registration-link{
+  font-size: 14px;
+  margin-left: 40px;
+  line-height: 24px;
+  margin-bottom: 0;
+
+  a{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
 /*--------------------------------------------------------------
 # Registration
 --------------------------------------------------------------*/
-#registration-img{
-  height: 50%;
-}
 
 #flash-message{
   color: #ff0019;
   padding: 10px;
-  margin-top: 10px;
-  font-size: 1.6rem;
+  margin-top: 5px;
+  font-size: 1.2rem;
   font-weight: bolder;
+  animation: flash 7s infinite;
+}
+
+#registration-link{
   text-align: center;
-  animation: flash 5s infinite;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 20px;
+  a{
+    border: 3px solid #36f336;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.7s ease-in-out;
+  }
+
+  a:hover{
+    background-color: #36f336;
+    color: black;
+  }
 }
 
 @keyframes flash {
