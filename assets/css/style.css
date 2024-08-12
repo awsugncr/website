@@ -853,6 +853,23 @@ section {
   font-size: 1.3rem;
   font-weight: bold;
   margin-top: 20px;
+
+
+  @media screen and (max-width: 768px){
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 576px){
+    font-size: 1.1rem;
+  }
+
+  @media screen and (max-width: 480px){
+    font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 360px){
+    font-size: 0.8rem;
+  }
   a{
     border: 3px solid #36f336;
     text-decoration: none;
