@@ -977,7 +977,7 @@ section {
 }
 
 #aws-banner-image {
-  width: 100%;
+  width: 90%;
   height: 430px;
   border-radius: 8px 0 0 8px;
   transition: width 0.3s ease;
@@ -998,6 +998,13 @@ section {
   font-size: 1rem;
   color: #666;
   line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+
+  #aws-banner-image {
+     width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
