@@ -9,7 +9,11 @@
 /** Variables */
 :root{
   --orange : #e48901;
-  --purple: rgb(153, 105, 247 )
+  --purple: rgb(153, 105, 247 );
+  --light-gray: #f5f5f5;
+  --dark-gray: #333;
+  --border-gray: #ddd;
+  --shadow: rgba(0, 0, 0, 0.1);
 }
 
 /*--------------------------------------------------------------
@@ -1394,9 +1398,9 @@ section {
   opacity: 1;
 }
 
-.volunteers .volunteer-item:hover h2 {
-  font-size: 2rem;
-}
+/* .volunteers .volunteer-item:hover h2 {
+  font-size: 1.6rem;
+} */
 
 .volunteers .volunteer-item:hover .testimonial-img{
   box-shadow:0px 0px 6px 5px #36f336;
