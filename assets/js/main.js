@@ -83,13 +83,17 @@
     const popup = document.getElementById("popup");
     const closeBtn = document.querySelector(".close-btn");
     popup.style.display = "flex";
+    const jsConfetti = new JSConfetti();
+    jsConfetti.addConfetti();
 
     closeBtn.addEventListener("click", function() {
         popup.style.display = "none";
+        jsConfetti.clearCanvas();
     });
     window.addEventListener("click", function(event) {
         if (event.target === popup) {
             popup.style.display = "none";
+            jsConfetti.clearCanvas();
         }
     });
 });
@@ -180,29 +184,45 @@
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
+    
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item',
       });
-
+  
       let portfolioFilters = select('#portfolio-flters li', true);
-
+  
+      // On page load, make .filter-AWS4 active and show related items
+      portfolioFilters.forEach(function(el) {
+        el.classList.remove('filter-active');
+      });
+      const initialFilter = select('#portfolio-flters li[data-filter=".filter-AWS4"]');
+      initialFilter.classList.add('filter-active');
+      
+      portfolioIsotope.arrange({
+        filter: '.filter-AWS4'
+      });
+  
+      portfolioIsotope.on('arrangeComplete', function() {
+        AOS.refresh(); // If you're using AOS animations, refresh them
+      });
+  
+      // Event listener for click to handle other filters
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
         portfolioFilters.forEach(function(el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
-
+  
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
         portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
+          AOS.refresh(); // Refresh animations after filtering
         });
       }, true);
     }
-
   });
 
   /**
