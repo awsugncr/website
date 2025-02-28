@@ -496,13 +496,13 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.82);
+  background: rgba(24, 24, 24, 0.82);
 }
 
 #hero {
   width: 100%;
   overflow: hidden;
-  background-image: url(../img/delhi-illustration.png);
+  background-image: url(../img/WomenInTechPoster.png);
   background-position: center;
   background-size: cover;
   padding: 0;
@@ -1021,13 +1021,15 @@ section {
 }
 
 .sponsor-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }
 
-.sponsor-grid .sponsor-item {
-  margin-bottom: 35px;
+.sponsor-item {
+  display: flex;
+  justify-content: center;
 }
 
 .sponsor-logo {
@@ -1041,6 +1043,7 @@ section {
   transform: scale(1.15);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
+
 
 @media (max-width: 768px) {
   .sponsor-logo {
