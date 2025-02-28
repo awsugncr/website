@@ -83,17 +83,17 @@
     const popup = document.getElementById("popup");
     const closeBtn = document.querySelector(".close-btn");
     popup.style.display = "flex";
-    const jsConfetti = new JSConfetti();
-    jsConfetti.addConfetti();
+    // const jsConfetti = new JSConfetti();
+    // jsConfetti.addConfetti();
 
     closeBtn.addEventListener("click", function() {
         popup.style.display = "none";
-        jsConfetti.clearCanvas();
+        // jsConfetti.clearCanvas();
     });
     window.addEventListener("click", function(event) {
         if (event.target === popup) {
             popup.style.display = "none";
-            jsConfetti.clearCanvas();
+            // jsConfetti.clearCanvas();
         }
     });
 });
