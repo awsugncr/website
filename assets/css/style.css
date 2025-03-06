@@ -1577,7 +1577,7 @@ section {
 }
 
 /* Workshop card container */
-.workshop-card {
+.panel-card {
   background-color: #ffffff;
   border: 1px solid var(--border-gray);
   border-radius: 8px;
@@ -1587,7 +1587,7 @@ section {
 }
 
 /* Header bar for workshop */
-.workshop-header {
+.panel-header {
   background-color: var(--purple);
   color: #fff;
   padding: 10px 20px;
@@ -1599,34 +1599,75 @@ section {
 }
 
 /* Content area of workshop card */
-.workshop-content {
-  padding: 20px;
+/* Moderator Design */
+.moderator-card {
+  position: relative;
+  color: rgb(0, 0, 0);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.workshop-title {
+.moderator-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  transition: transform 0.3s ease;
+}
+
+.moderator-card img:hover {
+  transform: scale(1.1);
+}
+
+.moderator-card h4 {
+  margin-top: 15px;
   font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: var(--dark-gray);
+  font-weight: 600;
 }
 
-.workshop-timing,
-.workshop-venue,
-.workshop-speakers {
+/* Panelists Grid */
+.panelists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.panelist-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panelist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.panelist-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #6c757d;
+  transition: transform 0.3s ease;
+}
+
+.panelist-card img:hover {
+  transform: scale(1.1);
+}
+
+.panelist-card p {
+  margin-top: 12px;
   font-size: 16px;
-  color: var(--dark-gray);
-  margin-bottom: 5px;
-}
-
-/* Hover effect for workshop card */
-.workshop-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 12px var(--shadow);
-}
-
-.workshop-preRequisite {
-  font-weight: bold;
-  color: blueviolet;
+  font-weight: 500;
+  color: #444;
 }
 
 /* Responsive Adjustments */
