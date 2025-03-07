@@ -1609,7 +1609,7 @@ section {
   margin-bottom: 30px;
 }
 
-.moderator-card img {
+.moderator-image {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -1618,11 +1618,11 @@ section {
   transition: transform 0.3s ease;
 }
 
-.moderator-card img:hover {
+.moderator-image:hover {
   transform: scale(1.1);
 }
 
-.moderator-card h4 {
+.moderator-name {
   margin-top: 15px;
   font-size: 20px;
   font-weight: 600;
@@ -1636,7 +1636,7 @@ section {
   justify-content: center;
 }
 
-.panelist-card {
+.panelists-card {
   background: white;
   padding: 20px;
   border-radius: 12px;
@@ -1645,12 +1645,12 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.panelist-card:hover {
+.panelists-card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.panelist-card img {
+.panelist-image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -1659,11 +1659,11 @@ section {
   transition: transform 0.3s ease;
 }
 
-.panelist-card img:hover {
+.panelist-image:hover {
   transform: scale(1.1);
 }
 
-.panelist-card p {
+.panelists-name {
   margin-top: 12px;
   font-size: 16px;
   font-weight: 500;
